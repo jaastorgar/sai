@@ -2,7 +2,7 @@ from rest_framework import serializers
 from django.contrib.auth.password_validation import validate_password
 from django.contrib.auth import get_user_model
 from django.db import transaction
-from .models import Perfil
+from .models import Perfil, MensajeContacto
 
 Usuario = get_user_model()
 
@@ -239,3 +239,22 @@ class TokenResponseSerializer(serializers.Serializer):
     refresh = serializers.CharField()
     access = serializers.CharField()
     user = UsuarioDetailSerializer()
+
+class MensajeContactoSerializer(serializers.ModelSerializer):
+    """
+    Serializer para crear mensajes de contacto desde el formulario web.
+    """
+    class Meta:
+        model = MensajeContacto
+        fields = [
+            'id', 'nombre', 'empresa', 'email', 'telefono',
+            'canal_preferido', 'mensaje', 'tipo_servicio',
+            'fecha_creacion'
+        ]
+        read_only_fields = ['fecha_creacion']
+    
+    def validate_telefono(self, value):
+        telefono_limpio = ''.join(filter(str.isdigit, value))
+        if len(telefono_limpio) < 9:
+            raise serializers.ValidationError('El teléfono debe tener al menos 9 dígitos.')
+        return telefono_limpio
