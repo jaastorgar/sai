@@ -479,7 +479,44 @@ input[type="submit"] {
     font-weight: 400;
     line-height: inherit;
 }
+.canal-opciones {
+    display: flex;
+    gap: 12px;
+}
 
+.canal-opciones input[type="radio"] {
+    display: none;
+}
+
+.canal-opciones label {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 2px solid rgba(248, 250, 252, 0.3);
+    border-radius: 6px;
+    background: transparent;
+    color: rgba(248, 250, 252, 0.7);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.canal-opciones input[type="radio"]:checked+label {
+    border-color: #2563EB;
+    background: rgba(37, 99, 235, 0.15);
+    color: #F8FAFC;
+}
+
+.canal-opciones label:hover {
+    border-color: rgba(248, 250, 252, 0.6);
+    color: #F8FAFC;
+}
 /*Footer*/
 .custom-footer {
     background-color: #F8FAFC;
