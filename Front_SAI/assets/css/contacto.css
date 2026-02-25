@@ -1,0 +1,61 @@
+/* ============================================================
+   contacto.css — Formulario sobre fondo oscuro corporativo
+   Linkear SOLO en contacto.html después de styles.css
+   ============================================================ */
+
+/* Título y párrafo intro */
+#contacto h2 {
+    color: #F8FAFC;
+}
+
+#contacto > .inner > p {
+    color: #F8FAFC;
+}
+
+/* Labels */
+#contacto label {
+    color: #F8FAFC;
+}
+
+/* Inputs, textarea y select */
+#contacto .field input,
+#contacto .field textarea,
+#contacto .field select {
+    border-color: rgba(248, 250, 252, 0.5);
+    color: #F8FAFC;
+    background-color: transparent;
+}
+
+#contacto .field input:focus,
+#contacto .field textarea:focus,
+#contacto .field select:focus {
+    outline: none;
+    border-color: #F8FAFC;
+}
+
+#contacto .field select option {
+    background-color: #0B1F3B;
+    color: #F8FAFC;
+}
+
+/* Botón enviar */
+#contacto input[type="submit"] {
+    border: 2px solid #F8FAFC;
+    color: #F8FAFC;
+    background-color: transparent;
+    font-family: 'Inter', sans-serif;
+    font-weight: 700;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 0 2.25em;
+    height: 3.2em;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.2s ease, color 0.2s ease;
+    margin-top: 30px;
+}
+
+#contacto input[type="submit"]:hover {
+    background-color: #F8FAFC;
+    color: #0B1F3B;
+}

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image" href="assets/img/logo SAI definitivo.png">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="assets/css/styles.css">    
+    <link rel="stylesheet" href="assets/css/contacto.css">
+    <title>Contacto</title>
+</head>
+
+<body>
+    <nav>
+        <div class="logo-container">
+            <a href="index.html">
+                <img src="assets/img/Logo SAI sin fondo.png" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-toggle">
+            <i class="fas fa-bars"></i>
+        </div>
+        <ul class="menu">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="nosotros.html">Acerca de Nosotros</a></li>
+            <li><a href="servicios.html">Servicios</a></li>
+            <li><a href="contacto.html">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <section class="hero">
+        <div class="container">
+            <h1>Contacto</h1>
+            <p>¿Quieres llevar tu empresa al siguiente nivel? Contáctanos ahora.</p>
+        </div>
+    </section>
+
+    <section id="contacto">
+        <div class="inner">
+            <h2>Contáctanos</h2>
+            <p>¿Quieres llevar tu empresa al siguiente nivel? Con nuestra experiencia en consultoría, tecnología de punta y capacitación de alto nivel, podemos hacerlo realidad. ¡Contáctanos ahora y comencemos a construir el futuro juntos!</p>
+            <form>
+                <div class="fields">
+                    <div class="field">
+                        <label for="name">Nombre</label>
+                        <input type="text" id="name" name="name" required>
+                    </div>
+                    <div class="field">
+                        <label for="empresa">Empresa</label>
+                        <input type="text" id="empresa" name="empresa" required>
+                    </div>
+                    <div class="field">
+                        <label for="email">Correo Electrónico</label>
+                        <input type="email" id="email" name="email" required>
+                    </div>
+                    <div class="field">
+                        <label for="telefono">Teléfono</label>
+                        <input type="tel" id="telefono" name="telefono" required>
+                    </div>
+                    <div class="field">
+                        <label for="mensaje">Mensaje</label>
+                        <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    </div>
+                    <div class="field">
+                        <label for="servicio">Tipo de servicio de interés</label>
+                        <select id="servicio" name="servicio" required>
+                            <option value="">Selecciona un servicio...</option>
+                            <option value="automatizacion">Automatización</option>
+                            <option value="consultoria">Consultoría</option>
+                            <option value="desarrollo">Desarrollo</option>
+                            <option value="formacion">Formación</option>
+                        </select>
+                    </div>
+                </div>
+                <ul class="actions">
+                    <li><input type="submit" value="Enviar mensaje"></li>
+                </ul>
+            </form>
+        </div>
+    </section>
+
+    <footer class="custom-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section footer-about">
+                    <img src="assets/img/Logo SAI sin fondo.png" alt="Logo SAI" class="footer-logo-img">
+                    
+                    <div class="footer-social">
+                        <a href="https://www.facebook.com/" target="_blank" title="LinkedIn"><i class="fab fa-facebook"></i></a>
+                        <a href="https://www.instagram.com/" target="_blank" title="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://www.twitter.com/" target="_blank" title="Twitter"><i class="fab fa-x-twitter"></i></a>
+                    </div>
+                </div>
+                <div class="footer-section footer-links">
+                    <h5>Navegación</h5>
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li><a href="nosotros.html">Nosotros</a></li>
+                        <li><a href="servicios.html">Servicios</a></li>
+                        <li><a href="contacto.html">Contacto</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-services">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="servicios.html#automatizacion">Automatización</a></li>
+                        <li><a href="servicios.html#consultoria">Consultoría</a></li>
+                        <li><a href="servicios.html#desarrollo">Desarrollo</a></li>
+                        <li><a href="servicios.html#formacion">Formación</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section footer-contact">
+                    <h5>Contacto</h5>
+                    <p><i class="fab fa-whatsapp"></i> <a href="tel:+56212345678">+56 2 1234 5678</a></p>
+                    <p><i class="fas fa-envelope"></i> <a href="mailto:contacto@saigroup.cl">contacto@saigroup.cl</a></p>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 SAI Consulting Group. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+        crossorigin="anonymous"></script>
+    <script src="assets/js/script.js"></script>
+    <script src="assets/js/footer.js"></script>
+</body>
+
+</html>
