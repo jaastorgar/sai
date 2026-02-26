@@ -86,13 +86,13 @@ DATABASES = {
         'ENGINE': 'django.db.backends.postgresql',
         'NAME': 'sai_bd',          # El nombre de la base de datos que creaste
         'USER': 'postgres',        # Usuario por defecto de Postgres (cámbialo si usas otro)
-        'PASSWORD': 'P4ss_SAI.2026!Grp', # La contraseña que elegiste
+        'PASSWORD': 'PassSAI2026', # La contraseña que elegiste
         'HOST': 'localhost',       # O '127.0.0.1'
         'PORT': '5432',            # Puerto por defecto de Postgres
     }
 }
 
-
+AUTH_USER_MODEL = 'usuarios.Usuario'
 # Password validation
 # https://docs.djangoproject.com/en/5.2/ref/settings/#auth-password-validators
 
