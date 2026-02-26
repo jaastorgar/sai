@@ -1,0 +1,9 @@
+venv/
+env/
+venv/
+env/
+saiconsult/venv/
+saiconsult/env/
+*.pyc
+db.sqlite3
+.env
