@@ -1,61 +1,199 @@
-/* ============================================================
-   contacto.css — Formulario sobre fondo oscuro corporativo
-   Linkear SOLO en contacto.html después de styles.css
-   ============================================================ */
-
-/* Título y párrafo intro */
-#contacto h2 {
-    color: #F8FAFC;
+.contacto {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 60px 40px;
 }
 
-#contacto > .inner > p {
-    color: #F8FAFC;
+.contacto h2 {
+    color: var(--white-accent);
 }
 
-/* Labels */
-#contacto label {
-    color: #F8FAFC;
+.contacto > .inner > p {
+    color: var(--white-accent);
 }
 
 /* Inputs, textarea y select */
-#contacto .field input,
-#contacto .field textarea,
-#contacto .field select {
-    border-color: rgba(248, 250, 252, 0.5);
-    color: #F8FAFC;
+.contacto .field input,
+.contacto .field textarea,
+.contacto .field select {
+    border-color: var(--white-accent);
+    color: var(--white-accent);
     background-color: transparent;
 }
 
-#contacto .field input:focus,
-#contacto .field textarea:focus,
-#contacto .field select:focus {
+.contacto .field input:focus,
+.contacto .field textarea:focus,
+.contacto .field select:focus {
     outline: none;
-    border-color: #F8FAFC;
+    border-color: var(--white-accent);
 }
 
-#contacto .field select option {
-    background-color: #0B1F3B;
-    color: #F8FAFC;
+.contacto .field select option {
+    background-color: var(--primary);
+    color: var(--white-accent);
+}
+
+.canal-opciones {
+    display: flex;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+
+.canal-opciones input[type="radio"] {
+    display: none;
+}
+
+.canal-opciones label {
+    flex: 1;
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 11px 16px;
+    border: 2px solid var(--white-accent);
+    border-radius: 6px;
+    background: transparent;
+    color: var(--white-accent);
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: none;
+    letter-spacing: 0;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.canal-opciones input[type="radio"]:checked + label {
+    border-color: var(--blue-accent);
+    background: var(--primary);
+    color: var(--white-accent);
+}
+
+.canal-opciones label:hover {
+    border-color: var(--white-accent);
+    color: var(--white-accent);
+}
+
+.field input,
+.field textarea {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--white-accent);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white-accent);
+    margin-left: 0;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    box-sizing: border-box;
+}
+
+.field select {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid var(--white-accent);
+    border-radius: 5px;
+    background-color: transparent;
+    color: var(--white-accent);
+    margin-left: 0;
+    font-size: 16px;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    box-sizing: border-box;
+}
+
+.field {
+    margin-bottom: 1.2em;
+}
+
+label {
+    color: var(--white-accent);
+    display: block;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 0 0 0.7em 0;
+    margin-left: 0;
+    text-transform: uppercase;
+}
+
+ul.actions {
+    display: flex;
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+    margin: 0;
 }
 
 /* Botón enviar */
-#contacto input[type="submit"] {
-    border: 2px solid #F8FAFC;
-    color: #F8FAFC;
+input[type="submit"] {
     background-color: transparent;
-    font-family: 'Inter', sans-serif;
-    font-weight: 700;
-    font-size: 15px;
-    text-transform: uppercase;
-    padding: 0 2.25em;
-    height: 3.2em;
     border-radius: 5px;
+    border: 2px solid var(--white-accent);
+    color: var(--white-accent);
+    font-size: 15px;
+    font-weight: bold;
+    height: 3.65em;
+    padding: 0 2.25em;
+    text-align: center;
+    text-transform: uppercase;
+    margin-top: 30px;
     cursor: pointer;
     transition: background-color 0.2s ease, color 0.2s ease;
-    margin-top: 30px;
 }
 
-#contacto input[type="submit"]:hover {
-    background-color: #F8FAFC;
-    color: #0B1F3B;
+.contacto input[type="submit"]:hover {
+    background-color: var(--white-accent);
+    color: var(--primary);
+}
+
+/* ══════════════════════════════
+   RESPONSIVE: TABLET (max 853px)
+══════════════════════════════ */
+@media (max-width: 853px) {
+    .contacto {
+        padding: 50px 24px;
+    }
+
+    input[type="submit"] {
+        width: 100%;
+        max-width: 100%;
+        margin-left: 0;
+    }
+}
+
+/* ══════════════════════════════
+   RESPONSIVE: MÓVIL (max 576px)
+══════════════════════════════ */
+@media (max-width: 576px) {
+    .contacto {
+        padding: 36px 16px;
+    }
+
+    .canal-opciones {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .canal-opciones label {
+        flex: none;
+        width: 100%;
+    }
+
+    label {
+        font-size: 13px;
+    }
+
+    .field input,
+    .field textarea,
+    .field select {
+        font-size: 15px;
+        padding: 10px 12px;
+    }
+
+    input[type="submit"] {
+        font-size: 14px;
+        height: 3.2em;
+        padding: 0 1.5em;
+        width: 100%;
+    }
 }
