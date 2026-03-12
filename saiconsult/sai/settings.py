@@ -84,11 +84,11 @@ WSGI_APPLICATION = 'sai.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'sai_bd',          # El nombre de la base de datos que creaste
-        'USER': 'postgres',        # Usuario por defecto de Postgres (cámbialo si usas otro)
-        'PASSWORD': 'Fabiola2026', # La contraseña que elegiste
-        'HOST': 'localhost',       # O '127.0.0.1'
-        'PORT': '5432',            # Puerto por defecto de Postgres
+        'NAME': 'sai_bd',         
+        'USER': 'postgres',        
+        'PASSWORD': 'Root1234', 
+        'HOST': 'localhost',     
+        'PORT': '5432',
     }
 }
 
