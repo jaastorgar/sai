@@ -197,8 +197,10 @@
 
 .equipo-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    /* Cambia 1fr por un ancho fijo (ej. 300px) para que no se estiren al infinito */
+    grid-template-columns: repeat(auto-fit, minmax(280px, 320px)); 
     gap: 28px;
+    justify-content: center; /* Centra las columnas automáticamente */        
 }
 
 .miembro-card {
@@ -378,3 +380,4 @@
         margin-top: 8px;
     }
 }
+
